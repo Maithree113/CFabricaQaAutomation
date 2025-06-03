@@ -1,0 +1,19 @@
+{
+  "name": "creativefabrica-qa-automation",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --project='UI Tests'",
+    "test:seo": "playwright test --project='SEO Tests'",
+    "test:report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "lighthouse": "^12.6.1",
+    "playwright": "^1.52.0",
+    "playwright-lighthouse": "^4.0.0",
+    "typescript": "^5.0.0",
+    "dotenv": "^16.4.7"
+  }
+}
