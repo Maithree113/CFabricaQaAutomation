@@ -11,6 +11,7 @@ test.describe("SEO Validation for Christmas Tree Bundle Page",{ tag: '@SEO'},() 
 
   test('SEO checks: Full SEO test with Lighthouse', async ({ christmasTreeBundlePage, page }) => {
 
+    //Image SEO checks
     const imageLocators = await christmasTreeBundlePage.getAllProductImages()
 
     let imageIssues: any[] = [];
@@ -25,12 +26,14 @@ test.describe("SEO Validation for Christmas Tree Bundle Page",{ tag: '@SEO'},() 
     }
     console.log('All Image SEO Issues:', imageIssues);
 
+    //page SEO checks
     const pageIssues = await validatePageSEO(page, { logOnly: true });
     console.log('Page SEO Issues:', pageIssues);
 
     const pageErrors = [...imageIssues, ...pageIssues].filter(i => i.severity === 'error');
     expect(pageErrors.length, `Found ${pageErrors.length} SEO error(s)`).toBe(0);
 
+    //Lighthouse integration for SEO checks
     await runLighthouseAudit(page, { logOnly: true });
   })
 });

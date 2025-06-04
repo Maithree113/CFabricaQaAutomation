@@ -13,6 +13,7 @@ for the **Christmas Tree Lantern Bundle** product page on Creative Fabrica.
 - ✅ Lighthouse integration for performance, accessibility, and SEO audits
 - ✅ Runs in Docker or CI (GitHub Actions)
 - ✅ Modular utilities for page, image, and Lighthouse SEO
+- ✅ .env file to work with different environment values
 
 ---
 
@@ -48,24 +49,6 @@ npm run test:report
 ```
 ---
 
-## Project Structure
-
-.
-├── tests/
-│   ├── product/
-│   │   └── christmasTreeTest.spec.ts       # UI tests
-│   └── seo/
-│       └── christmasTreeSeo.spec.ts        # SEO + Lighthouse
-├── src/
-│   └── utils/
-│       ├── imageSeoUtil.ts
-│       ├── pageLevelSeoUtil.ts
-│       └── lighthouseUtil.ts
-├── playwright.config.ts
-├── Dockerfile
-├── docker-compose.yml
-├── .github/workflows/playwright.yml        # GitHub Actions
----
 ## Run Tests with Docker
 ```bash
 docker build -t my-playwright-tests .
