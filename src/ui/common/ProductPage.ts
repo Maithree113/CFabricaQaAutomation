@@ -190,22 +190,6 @@ export class ProductPage extends BasePage {
         return this.productImage;
     }
 
-    get designerElements(): {
-        followButton: Locator;
-        name: Locator;
-        profileLink: Locator;
-        tagTitle: Locator;
-        tagsList: Locator;
-    } {
-        return {
-            followButton: this.followDesignerButton,
-            name: this.designerName,
-            profileLink: this.designerProfileLink,
-            tagTitle: this.designerTagTitle,
-            tagsList: this.designerTagsList
-        };
-    }
-
     get favouriteElements(): {
         button: Locator;
         list: Locator;
