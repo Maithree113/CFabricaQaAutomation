@@ -8,7 +8,10 @@ export default defineConfig({
   timeout: 300000,
   testDir: './tests',
   reporter: [['list'], ['html', { outputFolder: 'playwright-report', open: 'never' }]],
-
+  expect: {
+    timeout: 120000,
+    toMatchSnapshot: { maxDiffPixelRatio: 0.01 }
+  },
   use: {
     actionTimeout: 100000,
     navigationTimeout: 70000,

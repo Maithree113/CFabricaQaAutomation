@@ -14,6 +14,8 @@ for the **Christmas Tree Lantern Bundle** product page on Creative Fabrica.
 - ✅ Runs in Docker or CI (GitHub Actions)
 - ✅ Modular utilities for page, image, and Lighthouse SEO
 - ✅ .env file to work with different environment values
+- ✅ fixture to work with page objects
+- ✅ lighthouse report
 
 ---
 
