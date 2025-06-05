@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "test": "npx playwright test --update-snapshots",
+    "test": "npx playwright test ",
+    "testUpdate": "npx playwright test --update-snapshots",
     "test:ui": "playwright test --project='UI Tests'",
     "test:seo": "playwright test --project='SEO Tests'",
     "test:report": "playwright show-report"
